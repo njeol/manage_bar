@@ -2,7 +2,5 @@
 
 = link_to 'add alcool', new_alcool_path
 
-- if @alcool.present?
+- if @alcool
   = render @alcool
-- else
-  %h2 error

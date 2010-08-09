@@ -2,6 +2,15 @@
 
 Alcool
 = alcool.name
-%br
+
 Quantity
 = alcool.quantity
+
+= form_for @alcool do |f|
+  .field
+    = f.label :decrease
+    = f.text_field :temp
+  .field
+    = f.label :increase
+    = f.text_field :temp
+
