@@ -9,7 +9,7 @@ class AlcoolController < ApplicationController
   end
   
   def create
-    @alcool = Alcool.create(params[:manager])
+    @alcool = Alcool.create(params[:alcool])
     redirect_to alcools_path
     # if @stock.save
     #       redirect_to managers_path
