@@ -17,5 +17,6 @@ ActiveRecord::Schema.define(:version => 0) do
     t.string   "name"
     t.integer  "quantity"
     t.integer  "temp"
+    t.boolean   "flag"
   end
 end
