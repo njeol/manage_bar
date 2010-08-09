@@ -10,8 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100809094844) do
-
+ActiveRecord::Schema.define(:version => 0) do
   create_table "alcools", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -19,5 +18,4 @@ ActiveRecord::Schema.define(:version => 20100809094844) do
     t.integer  "quantity"
     t.integer  "temp"
   end
-
 end
