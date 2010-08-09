@@ -23,7 +23,7 @@ class AlcoolController < ApplicationController
   end
   
   def show
-    @Alcool = Alcool.find(params[:id])
+    @alcool = Alcool.find(params[:id])
   end
   
   def increase(n)

@@ -1,8 +1,14 @@
 %h3 List Alcool
 
 Alcool
-= manager.name
-%br
+= alcool.name
 Quantity
-= manager.quantity
+= alcool.quantity
 
+= form_for @alcool do |f|
+  .field
+    = f.label :decrease
+    = f.text_field :temp
+  .field
+    = f.label :increase
+    = f.text_field :temp
