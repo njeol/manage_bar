@@ -7,14 +7,14 @@
 = form_for alcool do |f|
   .field
     = f.label :decrease
-    = f.text_field :temp
+    = f.text_field "temp", "size" => 3 
   .field
     = f.submit
 
 = form_for alcool do |f|
   .field
     = f.label :increase
-    = f.text_field :temp
+    = f.text_field "temp", "size" => 3
   .field
     = f.submit
 %br
