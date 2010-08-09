@@ -17,6 +17,6 @@ ActiveRecord::Schema.define(:version => 20100809094844) do
     t.datetime "updated_at"
     t.string   "name"
     t.integer  "quantity"
+    t.integer  "temp"
   end
-
 end

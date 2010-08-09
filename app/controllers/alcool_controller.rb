@@ -9,13 +9,12 @@ class AlcoolController < ApplicationController
   end
   
   def create
-    @alcool = Alcool.create(params[:manager])
-    redirect_to alcools_path
-    # if @stock.save
-    #       redirect_to managers_path
-    #     else
-    #       render "new"
-    #     end
+    @alcool = Alcool.create(params[:alcool])
+    if @alcool.save
+      redirect_to alcools_path
+    else
+      render "new"
+    end
   end
   
   def decrease(n)
@@ -23,7 +22,7 @@ class AlcoolController < ApplicationController
   end
   
   def show
-    @Alcool = Alcool.find(params[:id])
+    @alcool = Alcool.find(params[:id])
   end
   
   def increase(n)
