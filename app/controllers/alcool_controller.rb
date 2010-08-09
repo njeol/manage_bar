@@ -10,12 +10,11 @@ class AlcoolController < ApplicationController
   
   def create
     @alcool = Alcool.create(params[:alcool])
-    redirect_to alcools_path
-    # if @stock.save
-    #       redirect_to managers_path
-    #     else
-    #       render "new"
-    #     end
+    if @alcool.save
+      redirect_to alcools_path
+    else
+      render "new"
+    end
   end
   
   def decrease(n)
