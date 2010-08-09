@@ -1,7 +1,7 @@
 class AlcoolController < ApplicationController
 
   def index
-  
+    @alcools = Alcool.all
   end
 
   def new
