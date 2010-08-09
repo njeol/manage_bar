@@ -1,6 +1,6 @@
 ManageBar::Application.routes.draw do
-  root :to => "alcool#index"
-  resources :alcool
+  root :to => "alcools#index"
+  resources :alcools
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

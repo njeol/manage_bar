@@ -1,0 +1,20 @@
+Alcool
+= alcool.name
+
+Quantity
+= alcool.quantity
+
+= form_for alcool do |f|
+  .field
+    = f.label :decrease
+    = f.text_field :temp
+  .field
+    = f.submit
+
+= form_for alcool do |f|
+  .field
+    = f.label :increase
+    = f.text_field :temp
+  .field
+    = f.submit
+%br
