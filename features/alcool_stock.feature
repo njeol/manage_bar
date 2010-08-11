@@ -23,18 +23,19 @@ Feature: Manage_stock
     
     
   @wip
-    Scenario Outline: Decrease a number of bottles of one alcool
-      Given I have <number_of_bottle> bottles of "<name_of_alcool>"
-      And I am on the list of alcools
-      And I fill in "quantity" with "<number_decreased>"
-      When I press "decrease"
-      Then I should see "<rest_of_bottle>"
+      Scenario Outline: Decrease a number of bottles of one alcool
+        Given I have <number_of_bottle> bottles of "<name_of_alcool>"
+        And I am on the list of alcools
+        And I fill in "quantity" with "<number_decreased>"
+        When I press "decrease"
+        Then I should see "<rest_of_bottle>"
+      
+      Examples:
+        | number_of_bottle | name_of_alcool    | number_decreased | rest_of_bottle |
+        |       50         |  vodka            |        10        |     40         |
+        |       75         |  wisky            |        22        |     53         |  
+
     
-    Examples:
-      | number_of_bottle | name_of_alcool    | number_decreased | rest_of_bottle |
-      |       50         |  vodka            |        10        |     40         |
-      |       75         |  wisky            |        22        |     53         |  
-  
   # @wip
   #   Scenario: decrease the number of bottles of one alcool
   #     Given I have 50 bottles of "vodka"
@@ -77,3 +78,5 @@ Feature: Manage_stock
   #     And I press the button add to stock
   #     Then The stock of vodka should be equal to 53 bottles
   
+  @wip
+    
