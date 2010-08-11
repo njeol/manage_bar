@@ -4,24 +4,24 @@ Feature: Manage_stock
   I want to buy time
   
   @wip
-    Scenario Outline: Adding alcool into a list
-      Given I have no alcool in the list
-      And I am on the list of alcools
-      When I follow "add alcool"
-      And I fill in "Name" with "<name_alcool>"
-      And I fill in "Quantity" with "<number_bottle>"
-      And I press "Create Alcool"
-      Then I should be on the list of alcools
-      And I should see "<name_alcool>"
-      And I should see "<number_bottle>"
-      And I should have 1 alcool in the list
+  Scenario Outline: Adding alcool into a list
+    Given I have no alcool in the list
+    And I am on the list of alcools
+    When I follow "add alcool"
+    And I fill in "Name" with "<name_alcool>"
+    And I fill in "Quantity" with "<number_bottle>"
+    And I press "Create Alcool"
+    Then I should be on the list of alcools
+    And I should see "<name_alcool>"
+    And I should see "<number_bottle>"
+    And I should have 1 alcool in the list
+  
+    Examples:
+      | name_alcool | number_bottle |
+      |  vodka      |     50        |
+      |  wisky      |     75        |
     
-      Examples:
-        | name_alcool | number_bottle |
-        |  vodka      |     50        |
-        |  wisky      |     75        |
-      
-      
+    
   @wip
     Scenario Outline: Decrease a number of bottles of one alcool
       Given I have <number_of_bottle> bottles of "<name_of_alcool>"
@@ -29,13 +29,14 @@ Feature: Manage_stock
       And I fill in "quantity" with "<number_decreased>"
       When I press "decrease"
       Then I should see "<rest_of_bottle>"
+<<<<<<< HEAD
       
       Examples:
         | number_of_bottle | name_of_alcool    | number_decreased | rest_of_bottle |
         |       50         |  vodka            |        10        |     40         |
         |       75         |  wisky            |        22        |     53         |  
-    
-  
+      
+
   @wip
     Scenario Outline: Increase a number of bottle to the stock of one alcool
       Given I have a <number_of_bottles> of "<name_of_alcool>"
@@ -49,8 +50,16 @@ Feature: Manage_stock
       | number_of_bottles | name_of_alcool | number_to_increased | rest_of_bottles |
       |         5         | vodka          |        50           |       55        |
       |         3         | wisky          |        60           |       63        |
+=======
+>>>>>>> parent of cf15a47... 3eme scenario : increase
     
+    Examples:
+      | number_of_bottle | name_of_alcool    | number_decreased | rest_of_bottle |
+      |       50         |  vodka            |        10        |     40         |
+      |       75         |  wisky            |        22        |     53         |  
   
+
+
   # @wip
   #   Scenario: decrease the number of bottles of one alcool
   #     Given I have 50 bottles of "vodka"
@@ -59,7 +68,7 @@ Feature: Manage_stock
   #     Then I should see "49"
   
 
-  #  @wip
+   # @wip
   # Scenario: Add alcool into a list
   #   Given I have no alcool in the list
   #   And I am on the list of alcools
@@ -92,4 +101,5 @@ Feature: Manage_stock
   #     When I enter 50 bottles in the casebox
   #     And I press the button add to stock
   #     Then The stock of vodka should be equal to 53 bottles
-  
+
+    
