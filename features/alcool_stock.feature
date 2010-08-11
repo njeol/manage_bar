@@ -61,6 +61,13 @@ Feature: Manage_stock
 
 
   # @wip
+  #   Scenario Outline: Send email when a stock of one alcool is under 5 bottles
+  #     Given I have <number_of_bottles> of "<name_of_alcool>"
+  #     And I am on the list of alcools
+  #     And <number_of_bottles> < "5"
+      
+
+  # @wip
   #   Scenario: decrease the number of bottles of one alcool
   #     Given I have 50 bottles of "vodka"
   #     And I am on the list of alcools
