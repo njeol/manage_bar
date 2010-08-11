@@ -34,8 +34,8 @@ Feature: Manage_stock
         | number_of_bottle | name_of_alcool    | number_decreased | rest_of_bottle |
         |       50         |  vodka            |        10        |     40         |
         |       75         |  wisky            |        22        |     53         |  
-    
-  
+      
+
   @wip
     Scenario Outline: Increase a number of bottle to the stock of one alcool
       Given I have a <number_of_bottles> of "<name_of_alcool>"
@@ -51,6 +51,8 @@ Feature: Manage_stock
       |         3         | wisky          |        60           |       63        |
     
   
+
+
   # @wip
   #   Scenario: decrease the number of bottles of one alcool
   #     Given I have 50 bottles of "vodka"
@@ -92,4 +94,5 @@ Feature: Manage_stock
   #     When I enter 50 bottles in the casebox
   #     And I press the button add to stock
   #     Then The stock of vodka should be equal to 53 bottles
-  
+
+    
