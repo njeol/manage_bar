@@ -7,11 +7,7 @@ class AlcoolsController < ApplicationController
   def new
     @alcool = Alcool.new()
   end
-  
-  def update
-    @alcool = Alcool.find(params[:id])
-  end
-  
+    
   def create
     @alcool = Alcool.create(params[:alcool])
     if @alcool.save
@@ -20,22 +16,26 @@ class AlcoolsController < ApplicationController
       render "new"
     end
   end
-  
-  def decrease(n)
-    @alcool.quantity -= n
-    redirect_to alcools_path
-  end
-  
+    
   def show
     @alcool = Alcool.find(params[:id])
   end
   
-  def increase(n)
-    
+  def update
+    @alcool = Alcool.find(params[:id])
+      
+    if params[:increase]
+      @alcool.quantity += params[:quantity].to_i
+    else
+      @alcool.quantity -= params[:quantity].to_i
+    end
+    @alcool.save
+    redirect_to alcools_path
   end
   
   def script
-    
+    # if @alcool.quantity <= 5
+      
   end
 
 end

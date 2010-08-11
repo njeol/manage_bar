@@ -1,8 +1,11 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.0.rc'
-gem 'cucumber'
+gem 'cucumber-rails'
+gem 'capybara'
 gem 'haml'
+gem 'webrat'
+gem 'rspec'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
