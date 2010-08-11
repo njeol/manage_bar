@@ -16,18 +16,9 @@ class AlcoolsController < ApplicationController
       render "new"
     end
   end
-  
-  def decrease
-    @alcool.quantity -= @alcool.temp
-    redirect_to alcools_path
-  end
-  
+    
   def show
     @alcool = Alcool.find(params[:id])
-  end
-  
-  def increase
-    
   end
   
   def update
@@ -43,7 +34,8 @@ class AlcoolsController < ApplicationController
   end
   
   def script
-    
+    # if @alcool.quantity <= 5
+      
   end
 
 end
