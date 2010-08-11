@@ -4,13 +4,16 @@
 	.field
 		= f.label :name
 		%br
-		= f.text_field :name
+		= f.text_field "name"
 	.field
 		= f.label :quantity
 		%br
-		= f.text_field :quantity
+		= f.text_field "quantity", "size" => 3
 	.field
 		= f.submit
 
 %br
 = link_to 'Back', alcools_path
+
+
+
